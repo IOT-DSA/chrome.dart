@@ -242,12 +242,12 @@ class Parameters extends ChromeObject {
   set reconnect(String value) => jsProxy['reconnect'] = value;
 }
 
-OnPlatformMessageEvent _createOnPlatformMessageEvent(String id, String message, String error) =>
+OnPlatformMessageEvent _createOnPlatformMessageEvent(String id, JsObject message, String error) =>
     new OnPlatformMessageEvent(id, _createPlatformMessage(message), error);
 ArrayBuffer _createArrayBuffer(/*JsObject*/ jsProxy) => jsProxy == null ? null : new ArrayBuffer.fromProxy(jsProxy);
 OnConfigCreatedEvent _createOnConfigCreatedEvent(String id, String name, JsObject data) =>
     new OnConfigCreatedEvent(id, name, data);
-OnUIEventEvent _createOnUIEventEvent(String event, String id) =>
+OnUIEventEvent _createOnUIEventEvent(JsObject event, String id) =>
     new OnUIEventEvent(_createUIEvent(event), id);
 PlatformMessage _createPlatformMessage(String value) => PlatformMessage.VALUES.singleWhere((ChromeEnum e) => e.value == value);
 UIEvent _createUIEvent(String value) => UIEvent.VALUES.singleWhere((ChromeEnum e) => e.value == value);

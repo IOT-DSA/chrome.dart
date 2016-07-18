@@ -52,6 +52,8 @@
     "syncFileSystem.DOMFileSystem": "FileSystem",
     "mediaGalleries.DOMFileSystem": "FileSystem",
 
+    "mdns.MDnsService": "MdnsService",
+
     "hid.GetDevicesOptions": "HidGetDevicesOptions",
     "hid.DeviceFilter": "HidDeviceFilter",
     "hid.DevicePromptOptions": "HidDevicePromptOptions",

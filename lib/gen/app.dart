@@ -5,7 +5,6 @@ library chrome.app;
 import '../src/common.dart';
 import '../src/files.dart';
 import 'windows.dart';
-import 'input.dart';
 
 part 'app_patch.dart';
 

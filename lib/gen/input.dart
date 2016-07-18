@@ -1051,12 +1051,12 @@ class InputImeDeleteSurroundingTextParams extends ChromeObject {
   set length(int value) => jsProxy['length'] = value;
 }
 
-OnActivateEvent _createOnActivateEvent(String engineID, String screen) =>
+OnActivateEvent _createOnActivateEvent(String engineID, JsObject screen) =>
     new OnActivateEvent(engineID, _createScreenType(screen));
 InputContext _createInputContext(JsObject jsProxy) => jsProxy == null ? null : new InputContext.fromProxy(jsProxy);
 OnKeyEventEvent _createOnKeyEventEvent(String engineID, JsObject keyData) =>
     new OnKeyEventEvent(engineID, _createKeyboardEvent(keyData));
-OnCandidateClickedEvent _createOnCandidateClickedEvent(String engineID, int candidateID, String button) =>
+OnCandidateClickedEvent _createOnCandidateClickedEvent(String engineID, int candidateID, JsObject button) =>
     new OnCandidateClickedEvent(engineID, candidateID, _createMouseButton(button));
 OnMenuItemActivatedEvent _createOnMenuItemActivatedEvent(String engineID, String name) =>
     new OnMenuItemActivatedEvent(engineID, name);

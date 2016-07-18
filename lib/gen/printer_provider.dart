@@ -9,7 +9,6 @@ library chrome.printerProvider;
 
 import '../src/files.dart';
 import '../src/common.dart';
-import '../gen/usb.dart';
 
 /**
  * Accessor for the `chrome.printerProvider` namespace.

@@ -294,7 +294,7 @@ class TargetInfo extends ChromeObject {
 
 OnEventEvent _createOnEventEvent(JsObject source, String method, JsObject params) =>
     new OnEventEvent(_createDebuggee(source), method, mapify(params));
-OnDetachEvent _createOnDetachEvent(JsObject source, String reason) =>
+OnDetachEvent _createOnDetachEvent(JsObject source, JsObject reason) =>
     new OnDetachEvent(_createDebuggee(source), _createDetachReason(reason));
 TargetInfo _createTargetInfo(JsObject jsProxy) => jsProxy == null ? null : new TargetInfo.fromProxy(jsProxy);
 TargetInfoType _createTargetInfoType(String value) => TargetInfoType.VALUES.singleWhere((ChromeEnum e) => e.value == value);

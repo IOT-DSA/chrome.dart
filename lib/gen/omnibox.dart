@@ -189,6 +189,6 @@ class DefaultSuggestResult extends ChromeObject {
 
 OnInputChangedEvent _createOnInputChangedEvent(String text, JsObject suggest) =>
     new OnInputChangedEvent(text, suggest);
-OnInputEnteredEvent _createOnInputEnteredEvent(String text, String disposition) =>
+OnInputEnteredEvent _createOnInputEnteredEvent(String text, JsObject disposition) =>
     new OnInputEnteredEvent(text, _createOnInputEnteredDisposition(disposition));
 OnInputEnteredDisposition _createOnInputEnteredDisposition(String value) => OnInputEnteredDisposition.VALUES.singleWhere((ChromeEnum e) => e.value == value);
